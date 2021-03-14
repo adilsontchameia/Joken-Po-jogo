@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
       //Desabilitar debugBanner
+      home: Home(),
       debugShowCheckedModeBanner: false));
 }
 
@@ -16,10 +17,8 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("JokenPo"),
-        backgroundColor: Colors.tealAccent
-      ),
+      appBar:
+          AppBar(title: Text("JokenPo"), backgroundColor: Colors.tealAccent),
     );
   }
 }
