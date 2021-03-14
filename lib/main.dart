@@ -34,7 +34,13 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              Image.asset("images/padrao.png"),
+              //Classe GestureDectetor()
+              GestureDetector(
+                onTap: () {
+                  print("Imagem Clicada");
+                },
+                child: Image.asset("images/padrao.png"),
+              ),
               Padding(
                 padding: EdgeInsets.only(top: 25, bottom: 30),
                 child: Text(
