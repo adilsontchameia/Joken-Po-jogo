@@ -14,6 +14,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  //Importando imagens
+  var _imagemApp = AssetImage("images/padrao.png");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,18 +32,12 @@ class _HomeState extends State<Home> {
                   "Escolha do App",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.orange),
                 ),
               ),
-              //Classe GestureDectetor()
-              GestureDetector(
-                onTap: () {
-                  print("Imagem Clicada");
-                },
-                child: Image.asset("images/padrao.png"),
-              ),
+              Image(image: this._imagemApp),
               Padding(
                 padding: EdgeInsets.only(top: 25, bottom: 30),
                 child: Text(
@@ -48,7 +45,8 @@ class _HomeState extends State<Home> {
                   style: TextStyle(
                       fontSize: 18,
                       fontStyle: FontStyle.normal,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.bold,
+                      color: Colors.orange),
                   textAlign: TextAlign.center,
                 ),
               ),
