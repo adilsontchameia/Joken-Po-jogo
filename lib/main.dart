@@ -44,11 +44,19 @@ class _HomeState extends State<Home> {
         });
         break;
     }
+    //Usuario Vencedor
     if (escolhaUsuario == "pedra" && escolhaApp == "tesoura" ||
         escolhaUsuario == "tesoura" && escolhaApp == "papel" ||
         escolhaUsuario == "papel" && escolhaApp == "pedra") {
-      this._mensagem = "Voce venceu";
-    } else {}
+      this._mensagem = "Voce Venceu :-)";
+      //App Vencedor
+    } else if (escolhaApp == "pedra" && escolhaUsuario == "tesoura" ||
+        escolhaApp == "tesoura" && escolhaApp == "papel" ||
+        escolhaApp == "papel" && escolhaUsuario == "pedra") {
+      this._mensagem = "Voce Perdeu :-(";
+    } else {
+      this._mensagem = "Houve um Empate";
+    }
   }
 
   @override
