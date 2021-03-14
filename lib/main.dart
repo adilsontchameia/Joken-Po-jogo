@@ -48,14 +48,20 @@ class _HomeState extends State<Home> {
     if (escolhaUsuario == "pedra" && escolhaApp == "tesoura" ||
         escolhaUsuario == "tesoura" && escolhaApp == "papel" ||
         escolhaUsuario == "papel" && escolhaApp == "pedra") {
-      this._mensagem = "Voce Venceu :-)";
+      setState(() {
+        this._mensagem = "Voce Venceu :-)";
+      });
       //App Vencedor
     } else if (escolhaApp == "pedra" && escolhaUsuario == "tesoura" ||
-        escolhaApp == "tesoura" && escolhaApp == "papel" ||
+        escolhaApp == "tesoura" && escolhaUsuario == "papel" ||
         escolhaApp == "papel" && escolhaUsuario == "pedra") {
-      this._mensagem = "Voce Perdeu :-(";
+      setState(() {
+        this._mensagem = "Voce Perdeu :-(";
+      });
     } else {
-      this._mensagem = "Houve um Empate";
+      setState(() {
+        this._mensagem = "Houve um Empate";
+      });
     }
   }
 
