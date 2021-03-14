@@ -19,6 +19,7 @@ class _HomeState extends State<Home> {
   //Importando imagens
   var _imagemApp = AssetImage("images/padrao.png");
 
+  var _mensagem = "Resultado";
   //Metodo de selecionar opcoes
   void _opcaoSelecionada(String escolhaUsuario) {
     var opcaoUsuario = ["pedra", "papel", "tesoura"];
@@ -43,6 +44,11 @@ class _HomeState extends State<Home> {
         });
         break;
     }
+    if (escolhaUsuario == "pedra" && escolhaApp == "tesoura" ||
+        escolhaUsuario == "tesoura" && escolhaApp == "papel" ||
+        escolhaUsuario == "papel" && escolhaApp == "pedra") {
+      this._mensagem = "Voce venceu";
+    } else {}
   }
 
   @override
@@ -69,7 +75,7 @@ class _HomeState extends State<Home> {
               Padding(
                 padding: EdgeInsets.only(top: 25, bottom: 30),
                 child: Text(
-                  "Resultado",
+                  _mensagem,
                   style: TextStyle(
                       fontSize: 18,
                       fontStyle: FontStyle.normal,
@@ -104,20 +110,6 @@ class _HomeState extends State<Home> {
                           height: 100,
                         ),
                       ),
-                      /*
-                      Image.asset(
-                        "images/pedra.png",
-                        height: 100,
-                      ),
-                      Image.asset(
-                        "images/papel.png",
-                        height: 100,
-                      ),
-                      Image.asset(
-                        "images/tesoura.png",
-                        height: 100,
-                      )
-                      */
                     ],
                   ),
                 ),
