@@ -21,7 +21,28 @@ class _HomeState extends State<Home> {
 
   //Metodo de selecionar opcoes
   void _opcaoSelecionada(String escolhaUsuario) {
-   
+    var opcaoUsuario = ["pedra", "papel", "tesoura"];
+    int numeroAleatorio = Random().nextInt(3);
+    var escolhaApp = opcaoUsuario[numeroAleatorio];
+
+    //Mostrar  imagem escolhida pelo app
+    switch (escolhaApp) {
+      case "pedra":
+        setState(() {
+          this._imagemApp = AssetImage("images/pedra.png");
+        });
+        break;
+      case "papel":
+        setState(() {
+          this._imagemApp = AssetImage("images/papel.png");
+        });
+        break;
+      case "tesoura":
+        setState(() {
+          this._imagemApp = AssetImage("images/tesoura.png");
+        });
+        break;
+    }
   }
 
   @override
