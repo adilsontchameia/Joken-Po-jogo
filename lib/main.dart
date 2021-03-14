@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +18,11 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   //Importando imagens
   var _imagemApp = AssetImage("images/padrao.png");
+
+  //Metodo de selecionar opcoes
+  void _opcaoSelecionada(String escolhaUsuario) {
+   
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,6 +62,28 @@ class _HomeState extends State<Home> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
+                      GestureDetector(
+                        onTap: () => _opcaoSelecionada("pedra"),
+                        child: Image.asset(
+                          "images/pedra.png",
+                          height: 100,
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () => _opcaoSelecionada("papel"),
+                        child: Image.asset(
+                          "images/papel.png",
+                          height: 100,
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () => _opcaoSelecionada("tesoura"),
+                        child: Image.asset(
+                          "images/tesoura.png",
+                          height: 100,
+                        ),
+                      ),
+                      /*
                       Image.asset(
                         "images/pedra.png",
                         height: 100,
@@ -67,6 +96,7 @@ class _HomeState extends State<Home> {
                         "images/tesoura.png",
                         height: 100,
                       )
+                      */
                     ],
                   ),
                 ),
