@@ -1,6 +1,6 @@
-# joken_po
+# Joken Po (Pedra, Papel, Tesoura)
 
-A new Flutter project.
+A simple Flutter project
 
 ## Getting Started
 
@@ -16,3 +16,5 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ![Screen Capture_dde-desktop_20210317204936](https://user-images.githubusercontent.com/64656900/111529325-522a9800-8762-11eb-87a9-847500c88af7.png)
+## The App Working.!
+![p1](https://user-images.githubusercontent.com/64656900/111534959-db44cd80-8768-11eb-9d29-fa87380e41cc.png)
